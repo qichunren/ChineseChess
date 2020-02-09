@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ChessMarker.gd" type="Script" id=1]
+[ext_resource path="res://marker.png" type="Texture" id=2]
+[ext_resource path="res://marker_normal.png" type="Texture" id=3]
+
+[node name="ChessMarker" type="TextureButton"]
+margin_left = -3.00827
+margin_top = -2.88292
+margin_right = 2.99173
+margin_bottom = 3.11708
+rect_pivot_offset = Vector2( 3.10744, 2.84229 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="." to="." method="_on_ChessMarker_mouse_entered"]

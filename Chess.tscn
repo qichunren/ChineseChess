@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://chess_selected_mark.png" type="Texture" id=1]
+[ext_resource path="res://Chess.gd" type="Script" id=2]
+
+[node name="Chess" type="TextureButton"]
+anchor_left = -0.017
+anchor_top = -0.023
+anchor_right = 0.018
+anchor_bottom = 0.03
+margin_left = -0.403385
+margin_top = -4.30336
+margin_right = -0.243387
+margin_bottom = -0.103363
+rect_pivot_offset = Vector2( 18, 18 )
+toggle_mode = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selected_mark" type="Sprite" parent="."]
+visible = false
+position = Vector2( 18.2719, 17.8747 )
+texture = ExtResource( 1 )
+[connection signal="mouse_entered" from="." to="." method="_on_Chess_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Chess_mouse_exited"]
