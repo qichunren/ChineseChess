@@ -134,7 +134,7 @@ func move_chess(chess, target_x, target_y):
 			#c.set_position(Vector2(p.x + chess.x_value*53-text_size.x/2, p.y - chess.y_value*53 - text_size.y/2))
 			#print("Set position end.")
 		#yield(get_tree().create_timer(0.1), "timeout")
-		chess_matrix[target_x][target_x] = chess
+		chess_matrix[target_x][target_y] = chess
 		chess.set_x_y_value(target_x, target_y)
 		chess.set_position(Vector2(p.x + target_x*53-text_size.x/2, p.y - target_y*53 - text_size.y/2))
 	else:
